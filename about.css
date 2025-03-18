@@ -1,0 +1,91 @@
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.arai {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.arai a {
+    color: orangered;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.arai a:hover {
+    color: #fff;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.about-section h2 {
+    font-size: 40px;
+    color: orangered;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #555;
+}
+
+/* Styling for the Contact Us link */
+.contact-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: orangered;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #d45721;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}

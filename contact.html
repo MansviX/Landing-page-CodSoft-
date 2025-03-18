@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="./contact.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="arai">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./discover.html">Package</a>
+        <a href="./contact.html">Contact</a>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+
+        <!-- Display Selected Package -->
+        <div class="selected-package">
+            <h3>You have selected the package:</h3>
+            <p id="package-name">Loading...</p> <!-- Placeholder for the selected package -->
+        </div>
+
+        <!-- Owner's Contact Information -->
+        <div class="contact-info">
+            <h3>Our Contact Details</h3>
+            <p><strong>Owner's Shop Name:</strong> Mansvi Mesharam</p>
+            <p><strong>Owner's Shop Address:</strong> Nagpur, Maharashtra India</p>
+            <p><strong>Phone Number:</strong> +99 899546356</p>
+            <p><strong>Email ID:</strong> explore@travelagency.com</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Register Your Details</h3>
+            <form action="thankyou.html" method="post"> <!-- Form action set to thankyou.html -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Your Address" required></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Explore. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Function to get the query parameter "package" from the URL
+        function getPackageFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const package = urlParams.get('package');
+            const packageName = document.getElementById('package-name');
+            
+            // Display the package name (or a default message if not found)
+            if (package) {
+                packageName.textContent = package.replace(/-/g, ' ').toUpperCase(); // Replace hyphens with spaces
+            } else {
+                packageName.textContent = 'No package selected';
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = getPackageFromURL;
+    </script>
+</body>
+</html>
